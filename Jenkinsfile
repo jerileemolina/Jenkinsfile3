@@ -167,11 +167,11 @@ pipeline {
       }
       steps {
         unstash 'Java 7'
-        sh "./jenkins/deploy.sh ${params.DEPLOY_TO}"
+        sh "./jenkins/deploy.sh ${params.IMPLEMENTAR}"
       }
     }
   }
   parameters {
-    string(name: 'DEPLOY_TO', defaultValue: 'dev', description: '')
+    string(name: 'IMPLEMENTAR', defaultValue: 'dev', description: '')
   }
 }
